@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فساتين سهرة</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f2;
+    color: #333;
+  }
+  header {
+    background: #9b59b6; /* لون مختلف عن الزفاف */
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  header h1 { margin: 0; font-size: 32px; }
+  header p { margin-top: 10px; font-size: 16px; }
+
+  section { padding: 30px 20px; max-width: 1200px; margin: auto; }
+
+  h2 { color: #8e44ad; text-align: center; margin-bottom: 30px; }
+
+  .dresses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .dress-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d7bde2;
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .dress-card img {
+    width: 100%;
+    height: 350px;      /* مقاس موحد */
+    object-fit: cover;  /* قص متناسق */
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .dress-card h3 { margin: 10px 0; color: #8e44ad; font-size: 20px; }
+  .dress-card p { font-size: 14px; margin-bottom: 10px; }
+
+  .price { font-weight: bold; color: #27ae60; font-size: 16px; margin-bottom: 10px; }
+  .discount { color: #e74c3c; font-weight: bold; margin-left: 5px; }
+
+  .booking-form { display: flex; flex-direction: column; gap: 10px; }
+  .booking-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .book-btn {
+    padding: 10px;
+    background: #8e44ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  .book-btn:hover { background: #a569bd; }
+
+  @media (max-width: 768px) {
+    .dresses-container { flex-direction: column; align-items: center; }
+    .dress-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>فساتين سهرة</h1>
+  <p>تألقي بأجمل فساتين السهرة لحفلاتك ومناسباتك</p>
+</header>
+
+<section>
+  <h2>أحدث فساتين السهرة</h2>
+  <div class="dresses-container">
+
+    <!-- فستان ملكي -->
+    <div class="dress-card">
+     <img src= 'images/king.jpg',>
+      <h3>فستان ملكي</h3>
+      <p>فستان سهرة بتصميم ملكي فخم يلفت الأنظار.</p>
+      <div class="price">900$ <span class="discount">خصم 10%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان ملكي">
+        <input type="text" name="name" placeholder="اسمك" required>
+ <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+    <!-- فستان ترتر -->
+    <div class="dress-card">
+      <img src= 'images/black.webp',>
+      <h3>فستان ترتر</h3>
+      <p>فستان لامع مطرز بالترتر لإطلالة ساحرة.</p>
+      <div class="price">750$ <span class="discount">خصم 15%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان ترتر">
+        <input type="text" name="name" placeholder="اسمك" required>
+       <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+    <!-- فستان سهرة دانتيل -->
+    <div class="dress-card">
+      <img src= 'images/dress4.webp',>
+      <h3>فستان دانتيل</h3>
+      <p>فستان سهرة أنيق من الدانتيل الفاخر.</p>
+      <div class="price">800$ <span class="discount">خصم 20%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان دانتيل">
+        <input type="text" name="name" placeholder="اسمك" required>
+ <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+    <!-- فستان سهرة قصير -->
+    <div class="dress-card">
+    <img src= 'images/short.jpg',>
+      <h3>فستان قصير</h3>
+      <p>فستان سهرة قصير أنيق للمناسبات البسيطة.</p>
+      <div class="price">600$ <span class="discount">خصم 5%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان قصير">
+        <input type="text" name="name" placeholder="اسمك" required>
+       <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

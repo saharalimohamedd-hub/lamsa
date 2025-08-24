@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تنظيف البشرة العميق</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+    header { background: #f7c59f; padding: 30px 20px; text-align: center; color: #fff; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin-top: 10px; font-size: 16px; }
+
+    section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+
+    h2 { color: #d35400; margin-bottom: 20px; text-align: center; }
+
+    /* خطوات التنظيف */
+    .steps-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .step-card {
+      background: #fff0e5;
+      border: 1px solid #f0c299;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .step-card i {
+      font-size: 36px;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .step-card h3 { color: #d35400; margin-bottom: 10px; font-size: 18px; }
+    .step-card p { font-size: 14px; margin-bottom: 15px; }
+    .price { font-weight: bold; color: #e67e22; font-size: 16px; }
+
+    /* نموذج الطلب */
+    form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+    button { background: #d35400; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+    button:hover { background: #e67e22; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .steps-container { flex-direction: column; align-items: center; }
+      .step-card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>تنظيف البشرة العميق</h1>
+  <p>احصلي على بشرة نقية، ناعمة ومشرقة مع أفضل جلسات تنظيف البشرة العميق</p>
+</header>
+
+<section>
+  <h2>خطوات تنظيف البشرة العميق وأسعارها</h2>
+  <div class="steps-container">
+    <div class="step-card">
+      <i class="fas fa-soap"></i>
+      <h3>تنظيف أولي للبشرة</h3>
+      <p>إزالة المكياج والشوائب السطحية</p>
+      <span class="price">20$</span>
+    </div>
+
+    <div class="step-card">
+      <i class="fas fa-sparkles"></i>
+      <h3>تقشير لطيف</h3>
+      <p>إزالة خلايا الجلد الميتة وتجديد البشرة</p>
+      <span class="price">25$</span>
+    </div>
+
+    <div class="step-card">
+      <i class="fas fa-water"></i>
+      <h3>البخار لفتح المسام</h3>
+      <p>فتح المسام لتسهيل تنظيف الأعماق</p>
+      <span class="price">15$</span>
+    </div>
+
+    <div class="step-card">
+      <i class="fas fa-hand-holding-water"></i>
+      <h3>استخراج الشوائب</h3>
+      <p>تنظيف الرؤوس السوداء والدهون الزائدة</p>
+      <span class="price">30$</span>
+    </div>
+
+    <div class="step-card">
+      <i class="fas fa-leaf"></i>
+      <h3>تطبيق ماسك مغذي</h3>
+      <p>ترطيب وتغذية البشرة بمواد طبيعية</p>
+      <span class="price">20$</span>
+    </div>
+
+    <div class="step-card">
+      <i class="fas fa-hand-sparkles"></i>
+      <h3>تطبيق سيروم وكريم مناسب</h3>
+      <p>ترطيب وحماية البشرة بعد الجلسة</p>
+      <span class="price">15$</span>
+    </div>
+  </div>
+
+<section>
+  <h2>احجز جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

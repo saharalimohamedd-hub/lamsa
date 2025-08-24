@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إكسسوارات</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      direction: rtl;
+    }
+    header {
+      background: #8e44ad;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    header p {
+      margin: 10px 0 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #8e44ad;
+      margin-bottom: 30px;
+    }
+    .accessories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .item-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .item-card:hover {
+      transform: translateY(-5px);
+    }
+    .item-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .item-card h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    .item-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+      margin-bottom: 15px;
+    }
+    .discount {
+      color: #e74c3c;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .booking-form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .book-btn {
+      width: 100%;
+      padding: 10px;
+      background: #8e44ad;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .book-btn:hover {
+      background: #732d91;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>إكسسوارات</h1>
+    <p>أضيفي لمسة جمال لإطلالتك مع تشكيلتنا الراقية</p>
+  </header>
+
+  <section>
+    <h2>تشكيلة مميزة</h2>
+    <div class="accessories-container">
+
+      <!-- حلق -->
+      <div class="item-card">
+        <img src= 'images/dahab.jpg',>
+        <h3>حلق ذهبي</h3>
+        <p>حلق أنيق مطلي بالذهب الخالص لإطلالة راقية.</p>
+        <div class="price">80$ <span class="discount">خصم 10%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="حلق ذهبي">
+          <input type="text" name="name" placeholder="اسمك" required>
+      <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+      <!-- سلسلة -->
+      <div class="item-card">
+        <img src= 'images/slsil.webp',>
+        <h3>سلسلة فضة</h3>
+        <p>سلسلة رقيقة من الفضة الإيطالية الخالصة.</p>
+        <div class="price">120$ <span class="discount">خصم 15%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="سلسلة فضة">
+          <input type="text" name="name" placeholder="اسمك" required>
+<input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+      <!-- خاتم -->
+<div class="item-card">
+       <img src= 'images/fda.webp',>
+        <h3>خاتم ألماس</h3>
+        <p>خاتم فاخر مرصع بالألماس البراق.</p>
+        <div class="price">250$ <span class="discount">خصم 20%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="خاتم ألماس">
+          <input type="text" name="name" placeholder="اسمك" required>
+          <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+      <!-- سوار -->
+      <div class="item-card">
+       <img src= 'images/geld.jpg',>
+        <h3>سوار جلد</h3>
+        <p>سوار عصري من الجلد الطبيعي يناسب جميع المناسبات.</p>
+        <div class="price">60$ <span class="discount">خصم 5%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="سوار جلد">
+          <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

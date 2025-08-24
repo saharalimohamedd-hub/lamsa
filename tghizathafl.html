@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجهيزات الحفل</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0;
+            color: #ff1493;
+            font-size: 26px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 22px;
+            color: #ff69b4;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #ff69b4;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .service-card-content h3 {
+            margin: 10px 0;
+            color: #ff1493;
+            font-size: 20px;
+            text-align: center;
+        }
+        .service-card-content p {
+            font-size: 14px;
+            color: #666;
+            min-height: 50px;
+            text-align: center;
+        }
+        .price {
+            font-weight: bold;
+            color: #ff1493;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        form input, form select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        form input[type="submit"] {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form input[type="submit"]:hover {
+            background-color: #ff1493;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>قسم تجهيزات الحفل</h1>
+</header>
+
+<h2>خدماتنا لتجهيز الحفل</h2>
+
+
+<div class="container">
+    <div class="service-card">
+        <img src="images/aroos.jpg" alt="تصوير العروس">
+        <div class="service-card-content">
+            <h3>جلسة تصوير للعروس</h3>
+            <p>تصوير احترافي قبل الحفل لتوثيق كل التفاصيل.</p>
+            <div class="price">$150</div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+               
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="جلسة تصوير للعروس">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img src="images/tswer.jpg" alt="فيديو الحفل">
+        <div class="service-card-content">
+            <h3>فيديو الحفل</h3>
+            <p>تصوير فيديو احترافي للحدث كامل مع مونتاج نهائي.</p>
+            <div class="price">$250</div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+               
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="فيديو الحفل">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="service-card">
+        <img src="images/sala.jpg" alt="تجهيز الصالة">
+        <div class="service-card-content">
+            <h3>تجهيز الصالة</h3>
+            <p>تنسيق الطاولات والكراسي وترتيب الصالة بشكل جميل ومناسب للعرس.</p>
+            <div class="price">$300</div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="تجهيز الصالة">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img src="images/decoor.webp" alt="ديكور الحفل">
+        <div class="service-card-content">
+            <h3>الديكور</h3>
+            <p>ديكور عصري وجميل يتناسب مع ثيم الحفل ويبرز جمال المكان.</p>
+            <div class="price">$200</div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+              
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="الديكور">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

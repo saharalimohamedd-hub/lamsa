@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ماسكات طبيعية للبشرة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+    header { background: #a8d5ba; padding: 30px 20px; text-align: center; color: #fff; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin-top: 10px; font-size: 16px; }
+
+    section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+
+    h2 { color: #27ae60; margin-bottom: 20px; text-align: center; }
+
+    /* بطاقات الماسكات */
+    .masks-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .mask-card {
+      background: #eafaf1;
+      border: 1px solid #b2dfc6;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .mask-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .mask-card i {
+      font-size: 36px;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+
+    .mask-card h3 { color: #27ae60; margin-bottom: 10px; font-size: 18px; }
+    .mask-card p { font-size: 14px; margin-bottom: 15px; }
+    .price { font-weight: bold; color: #27ae60; font-size: 16px; }
+
+    /* نموذج الحجز */
+    form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+    button { background: #27ae60; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+    button:hover { background: #2ecc71; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .masks-container { flex-direction: column; align-items: center; }
+      .mask-card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ماسكات طبيعية للبشرة</h1>
+  <p>اختاري الماسك المناسب لبشرتك وتمتعي ببشرة ناعمة وصحية بطريقة طبيعية</p>
+</header>
+
+<section>
+  <h2>أشهر الماسكات الطبيعية وأسعارها</h2>
+  <div class="masks-container">
+    <div class="mask-card">
+      <i class="fas fa-honey"></i>
+      <h3>ماسك العسل</h3>
+      <p>ترطيب البشرة وتفتيحها باستخدام العسل الطبيعي</p>
+      <span class="price">10$</span>
+    </div>
+
+    <div class="mask-card">
+      <i class="fas fa-carrot"></i>
+      <h3>ماسك الجزر</h3>
+      <p>يمنح البشرة إشراقة طبيعية ويحميها من التجاعيد</p>
+      <span class="price">12$</span>
+    </div>
+
+    <div class="mask-card">
+      <i class="fas fa-apple-alt"></i>
+      <h3>ماسك التفاح</h3>
+      <p>يقشر البشرة بلطف ويجعلها ناعمة ومشرقة</p>
+      <span class="price">11$</span>
+    </div>
+
+    <div class="mask-card">
+      <i class="fas fa-lemon"></i>
+      <h3>ماسك الليمون والعسل</h3>
+      <p>لتفتيح البقع الداكنة وتنقية البشرة</p>
+      <span class="price">13$</span>
+    </div>
+
+    <div class="mask-card">
+      <i class="fas fa-seedling"></i>
+      <h3>ماسك الشوفان والحليب</h3>
+      <p>ترطيب وتنعيم البشرة الحساسة</p>
+      <span class="price">12$</span>
+    </div>
+
+    <div class="mask-card">
+      <i class="fas fa-pepper-hot"></i>
+      <h3>ماسك الطماطم</h3>
+      <p>يزيل الدهون الزائدة ويقلل البثور ويوازن البشرة الدهنية</p>
+      <span class="price">11$</span>
+    </div>
+  </div>
+
+  <h2>احجز جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

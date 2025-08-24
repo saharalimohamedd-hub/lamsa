@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فساتين زفاف</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f2;
+    color: #333;
+  }
+  header {
+    background: #ff6f61;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  header h1 { margin: 0; font-size: 32px; }
+  header p { margin-top: 10px; font-size: 16px; }
+
+  section { padding: 30px 20px; max-width: 1200px; margin: auto; }
+
+  h2 { color: #d35400; text-align: center; margin-bottom: 30px; }
+
+  .dresses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .dress-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #f5c2b2;
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .dress-card img {
+    width: 100%;
+    height: 350px;      /* مقاس موحّد */
+    object-fit: cover;  /* قص الصورة مع الحفاظ على التناسق */
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .dress-card h3 { margin: 10px 0; color: #d35400; font-size: 20px; }
+  .dress-card p { font-size: 14px; margin-bottom: 10px; }
+
+  .price { font-weight: bold; color: #27ae60; font-size: 16px; margin-bottom: 10px; }
+  .discount { color: #e74c3c; font-weight: bold; margin-left: 5px; }
+
+  .booking-form { display: flex; flex-direction: column; gap: 10px; }
+  .booking-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .book-btn {
+    padding: 10px;
+    background: #d35400;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
+  }
+  .book-btn:hover { background: #e67e22; }
+
+  @media (max-width: 768px) {
+    .dresses-container { flex-direction: column; align-items: center; }
+    .dress-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>فساتين زفاف</h1>
+  <p>اختاري فستان أحلامك واحجزيه بسهولة</p>
+</header>
+
+<section>
+  <h2>أجمل فساتين الزفاف</h2>
+  <div class="dresses-container">
+
+    <!-- فستان كلاسيكي -->
+    <div class="dress-card">
+      <img src= 'images/klasiki.jpg',>
+      <h3>فستان كلاسيكي</h3>
+      <p>تصميم أنيق وكلاسيكي يناسب كل الأذواق.</p>
+      <div class="price">1200$ <span class="discount">خصم 15%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان كلاسيكي">
+        <input type="text" name="name" placeholder="اسمك" required>
+       <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+    <!-- فستان عصري -->
+    <div class="dress-card">
+     <img src= 'images/asri.jpg',>
+      <h3>فستان عصري</h3>
+      <p>تصميم عصري مع لمسات فريدة وأقمشة راقية.</p>
+      <div class="price">1500$ <span class="discount">خصم 10%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان عصري">
+        <input type="text" name="name" placeholder="اسمك" required>
+      <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+    <!-- فستان دانتيل -->
+    <div class="dress-card">
+      <img src= 'images/dantrl.jpg',>
+
+<h3>فستان دانتيل</h3>
+      <p>فستان رقيق مزين بالدانتيل الفاخر لمسة رومانسية.</p>
+      <div class="price">1300$ <span class="discount">خصم 20%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="dress" value="فستان دانتيل">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+
+        <button type="submit" class="book-btn">احجز الآن</button>
+      </form>
+    </div>
+
+   
+
+  </div>
+</section>
+
+</body>
+</html>

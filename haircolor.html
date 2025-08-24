@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صبغ الشعر</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+  header { background: #ff6f61; padding: 30px 20px; text-align: center; color: #fff; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin-top: 10px; font-size: 16px; }
+  section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+  h2 { color: #d35400; margin-bottom: 20px; text-align: center; }
+
+  /* بطاقات صبغ الشعر */
+  .colors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .color-card {
+    background: #fdebd0;
+    border: 1px solid #f5cba7;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .color-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .color-card i {
+    font-size: 36px;
+    color: #d35400;
+    margin-bottom: 10px;
+  }
+  .color-card h3 { color: #d35400; margin-bottom: 10px; font-size: 18px; }
+  .color-card p { font-size: 14px; margin-bottom: 15px; }
+  .price { font-weight: bold; color: #d35400; font-size: 16px; }
+
+  /* نموذج الحجز */
+  form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+  input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+  button { background: #d35400; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+  button:hover { background: #e67e22; }
+
+  @media (max-width: 768px) {
+    .colors-container { flex-direction: column; align-items: center; }
+    .color-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>صبغ الشعر</h1>
+  <p>اختاري لون الشعر الذي يناسبك وتمتعي بمظهر رائع وأنيق</p>
+</header>
+
+<section>
+  <h2>أنواع صبغات الشعر وأسعارها</h2>
+  <div class="colors-container">
+    <div class="color-card">
+      <i class="fas fa-leaf"></i>
+      <h3>صبغة طبيعية</h3>
+      <p>لون طبيعي يدوم طويلاً ويعطي لمعاناً صحياً للشعر</p>
+      <span class="price">25$</span>
+    </div>
+    <div class="color-card">
+      <i class="fas fa-sun"></i>
+      <h3>صبغة فاتحة</h3>
+      <p>تغيير لون الشعر إلى درجات فاتحة جذابة ومشرقة</p>
+      <span class="price">30$</span>
+    </div>
+    <div class="color-card">
+      <i class="fas fa-moon"></i>
+      <h3>صبغة داكنة</h3>
+      <p>للحصول على لون داكن غني وعميق يدوم طويلاً</p>
+      <span class="price">28$</span>
+    </div>
+    <div class="color-card">
+      <i class="fas fa-star"></i>
+      <h3>هايلايت</h3>
+      <p>إضافة خصل مضيئة لإطلالة عصرية ولامعة</p>
+      <span class="price">35$</span>
+    </div>
+    <div class="color-card">
+      <i class="fas fa-adjust"></i>
+      <h3>أومبري</h3>
+      <p>تدرج ألوان الشعر من الغامق إلى الفاتح بأسلوب أنيق</p>
+      <span class="price">40$</span>
+    </div>
+    <div class="color-card">
+      <i class="fas fa-droplet"></i>
+      <h3>بالياج</h3>
+      <p>خصل متدرجة بشكل طبيعي تمنح الشعر مظهراً جذاباً</p>
+      <span class="price">45$</span>
+    </div>
+  </div>
+
+  <h2>احجزي جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

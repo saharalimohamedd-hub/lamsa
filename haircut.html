@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قص الشعر</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+  header { background: #f5b041; padding: 30px 20px; text-align: center; color: #fff; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin-top: 10px; font-size: 16px; }
+  section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+  h2 { color: #d35400; margin-bottom: 20px; text-align: center; }
+
+  /* بطاقات قص الشعر */
+  .haircuts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .haircut-card {
+    background: #fdebd0;
+    border: 1px solid #f5cba7;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .haircut-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .haircut-card i {
+    font-size: 36px;
+    color: #d35400;
+    margin-bottom: 10px;
+  }
+  .haircut-card h3 { color: #d35400; margin-bottom: 10px; font-size: 18px; }
+  .haircut-card p { font-size: 14px; margin-bottom: 15px; }
+  .price { font-weight: bold; color: #d35400; font-size: 16px; }
+
+  /* نموذج الحجز */
+  form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+  input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+  button { background: #d35400; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+  button:hover { background: #e67e22; }
+
+  @media (max-width: 768px) {
+    .haircuts-container { flex-direction: column; align-items: center; }
+    .haircut-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>قص الشعر</h1>
+  <p>اختاري نوع القص المناسب لشعرك وتمتعي بمظهر أنيق وصحي</p>
+</header>
+
+<section>
+  <h2>أنواع قص الشعر وأسعارها</h2>
+  <div class="haircuts-container">
+    <div class="haircut-card">
+      <i class="fas fa-cut"></i>
+      <h3>قص الشعر القصير</h3>
+      <p>قص الشعر القصير بشكل احترافي لإبراز ملامح الوجه</p>
+      <span class="price">15$</span>
+    </div>
+    <div class="haircut-card">
+      <i class="fas fa-cut"></i>
+      <h3>قص الشعر الطويل</h3>
+      <p>تقليم الشعر الطويل مع الحفاظ على صحته ولمعانه</p>
+      <span class="price">20$</span>
+    </div>
+    <div class="haircut-card">
+      <i class="fas fa-cut"></i>
+      <h3>قص المدرجات</h3>
+      <p>تشكيل الشعر المدرج لإضفاء حركة وحجم طبيعي</p>
+      <span class="price">25$</span>
+    </div>
+    <div class="haircut-card">
+      <i class="fas fa-cut"></i>
+      <h3>قص البوب</h3>
+      <p>قص قصير عصري على شكل بوب يناسب جميع الأشكال</p>
+      <span class="price">22$</span>
+    </div>
+    <div class="haircut-card">
+      <i class="fas fa-cut"></i>
+      <h3>قص الطبقات</h3>
+      <p>قص الشعر على شكل طبقات لإضافة كثافة وحيوية للشعر</p>
+      <span class="price">23$</span>
+    </div>
+  </div>
+
+  <h2>احجز جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

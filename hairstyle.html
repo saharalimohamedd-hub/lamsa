@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تصفيف الشعر</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+  header { background: #3498db; padding: 30px 20px; text-align: center; color: #fff; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin-top: 10px; font-size: 16px; }
+  section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+  h2 { color: #2980b9; margin-bottom: 20px; text-align: center; }
+
+  /* بطاقات تصفيف الشعر */
+  .styles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .style-card {
+    background: #d6eaf8;
+    border: 1px solid #85c1e9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .style-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .style-card i {
+    font-size: 36px;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  .style-card h3 { color: #2980b9; margin-bottom: 10px; font-size: 18px; }
+  .style-card p { font-size: 14px; margin-bottom: 15px; }
+  .price { font-weight: bold; color: #2980b9; font-size: 16px; }
+
+  /* نموذج الحجز */
+  form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+  input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+  button { background: #2980b9; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+  button:hover { background: #3498db; }
+
+  @media (max-width: 768px) {
+    .styles-container { flex-direction: column; align-items: center; }
+    .style-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>تصفيف الشعر</h1>
+  <p>اختاري طريقة التصفيف التي تناسبك وتمتعي بإطلالة أنيقة وجذابة</p>
+</header>
+
+<section>
+  <h2>أشهر تصفيفات الشعر وأسعارها</h2>
+  <div class="styles-container">
+    <div class="style-card">
+      <i class="fas fa-cut"></i>
+      <h3>تسريحة يومية</h3>
+      <p>تصفيف سريع ومناسب للروتين اليومي</p>
+      <span class="price">15$</span>
+    </div>
+    <div class="style-card">
+      <i class="fas fa-tie"></i>
+      <h3>تسريحة رسمية</h3>
+      <p>تصفيف أنيق لحضور المناسبات والاجتماعات</p>
+      <span class="price">25$</span>
+    </div>
+    <div class="style-card">
+      <i class="fas fa-gem"></i>
+      <h3>تسريحة سهرات</h3>
+      <p>تصفيف فاخر ومميز لإطلالة السهرات والمناسبات الخاصة</p>
+      <span class="price">35$</span>
+    </div>
+    <div class="style-card">
+      <i class="fas fa-braille"></i>
+      <h3>تسريحة مضفرة</h3>
+      <p>ضفائر أنيقة ومميزة لجميع المناسبات</p>
+      <span class="price">30$</span>
+    </div>
+    <div class="style-card">
+      <i class="fas fa-arrows-alt-h"></i>
+      <h3>تسريحة شعر مستقيم</h3>
+      <p>تمليس الشعر وإضفاء لمعان وحيوية للشعر</p>
+      <span class="price">28$</span>
+    </div>
+    <div class="style-card">
+      <i class="fas fa-water"></i>
+      <h3>تسريحة شعر مموج</h3>
+      <p>إطلالة طبيعية وناعمة مع تموجات جذابة</p>
+      <span class="price">28$</span>
+    </div>
+  </div>
+
+  <h2>احجزي جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

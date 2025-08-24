@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ملابس رجالية للعرسان</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      direction: rtl;
+    }
+    header {
+      background: #34495e;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    header p {
+      margin: 10px 0 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #34495e;
+      margin-bottom: 30px;
+    }
+    .men-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .item-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .item-card:hover {
+      transform: translateY(-5px);
+    }
+    .item-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .item-card h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    .item-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .discount {
+      color: #e74c3c;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .booking-form input {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .book-btn {
+      width: 100%;
+      padding: 10px;
+      background: #34495e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .book-btn:hover {
+      background: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ملابس رجالية للعرسان</h1>
+    <p>إطلالتك الأنيقة تبدأ من هنا ✨</p>
+  </header>
+
+  <section>
+    <h2>تشكيلة العرسان</h2>
+    <div class="men-container">
+
+      <!-- بدلة رسمية -->
+      <div class="item-card">
+        <img src= 'images/bdla.jpg',>
+        <h3>بدلة رسمية</h3>
+        <p>بدلة كلاسيكية أنيقة تناسب حفلات الزفاف والمناسبات.</p>
+        <div class="price">350$ <span class="discount">خصم 15%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="بدلة رسمية">
+          <input type="text" name="name" placeholder="اسمك" required>
+     <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+      <!-- قميص أبيض -->
+      <div class="item-card">
+        <img src= 'images/white.jpg',>
+        <h3>قميص أبيض</h3>
+        <p>قميص كلاسيكي باللون الأبيض يضفي لمسة راقية.</p>
+        <div class="price">60$ <span class="discount">خصم 10%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="قميص أبيض">
+          <input type="text" name="name" placeholder="اسمك" required>
+          <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+      <!-- حذاء كلاسيكي -->
+      <div class="item-card">
+       <img src= 'images/heza.jpg',>
+        <h3>حذاء كلاسيكي</h3>
+        <p>حذاء جلدي فاخر يكمل أناقتك في يوم الزفاف.</p>
+        <div class="price">150$ <span class="discount">خصم 12%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="حذاء كلاسيكي">
+          <input type="text" name="name" placeholder="اسمك" required>
+  <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+      <!-- ساعة فاخرة -->
+      <div class="item-card">
+      <img src= 'images/colok.jpg',>
+        <h3>ساعة فاخرة</h3>
+        <p>ساعة يد أنيقة لإطلالة راقية ومميزة.</p>
+        <div class="price">250$ <span class="discount">خصم 8%</span></div>
+        <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+          <input type="hidden" name="item" value="ساعة فاخرة">
+          <input type="text" name="name" placeholder="اسمك" required>
+          <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+          <button type="submit" class="book-btn">احجز الآن</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

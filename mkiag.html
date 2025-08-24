@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قسم المكياج</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0;
+            color: #ff1493;
+            font-size: 26px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 22px;
+            color: #ff69b4;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #ff69b4;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .makeup-card {
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .makeup-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .makeup-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .makeup-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .makeup-card-content {
+            padding: 20px;
+            text-align: center; /* محاذاة جميع محتويات البطاقة للوسط */
+        }
+        .makeup-card-content h3 {
+            margin: 10px 0;
+            color: #ff1493;
+            font-size: 20px;
+            text-align: center; /* محاذاة العنوان إلى الوسط */
+        }
+        .makeup-card-content p {
+            font-size: 14px;
+            color: #666;
+            min-height: 50px;
+            text-align: center; /* محاذاة الوصف إلى الوسط */
+        }
+        .price {
+            font-weight: bold;
+            color: #ff1493;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+        .makeup-card-content button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .makeup-card-content button:hover {
+            background-color: #ff1493;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        form input, form select {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            text-align: center; /* جعل نص الحقول في الوسط */
+        }
+        form input[type="submit"] {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form input[type="submit"]:hover {
+            background-color: #ff1493;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>قسم تجهيز المكياج</h1>
+</header>
+
+<h2>اختاري المكياج الذي يناسبك</h2>
+
+
+<div class="container">
+    <div class="makeup-card">
+        <img src="images/mekap2.webp" alt="مكياج عروس كامل">
+        <div class="makeup-card-content">
+            <h3>مكياج عروس كامل</h3>
+            <p>تجهيز كامل للمكياج لتظهري بأجمل طلة يوم زفافك.</p>
+            <div class="price">$120 <span class="original-price">$150</span></div>
+            
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+           <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="مكياج عروس كامل">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+
+    <div class="makeup-card">
+        <img src="images/mekap3.jpg" alt="مكياج فاخر">
+        <div class="makeup-card-content">
+            <h3>مكياج فاخر</h3>
+            <p>إطلالة فاخرة ومميزة تناسب ليلة الزفاف.</p>
+            <div class="price">$100 <span class="original-price">$130</span></div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="مكياج فاخر">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="makeup-card">
+        <img src="images/mekap4.jpg" alt="مكياج سهرات">
+        <div class="makeup-card-content">
+            <h3>مكياج سهرات</h3>
+            <p>إطلالة رائعة وساحرة لأي مناسبة أو سهرة.</p>
+            <div class="price">$80 <span class="original-price">$100</span></div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+           <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="مكياج سهرات">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+
+    <div class="makeup-card">
+        <img src="images/mekap3.jpg" alt="مكياج ناعم">
+        <div class="makeup-card-content">
+            <h3>مكياج ناعم</h3>
+            <p>لمظهر أنيق وراقي يناسب المناسبات الصغيرة.</p>
+            <div class="price">$60 <span class="original-price">$80</span></div>
+            <form action="https://formspree.io/f/mdkdqkal" method="POST">
+                <input type="text" name="name" placeholder="الاسم" required>
+               <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                <input type="date" name="date" required>
+                <input type="hidden" name="service" value="مكياج ناعم">
+                <input type="submit" value="احجز الآن">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

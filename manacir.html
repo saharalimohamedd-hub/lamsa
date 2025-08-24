@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مانيكير وباديكير</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff8f2; color: #333; }
+  header { background: #e91e63; padding: 30px 20px; text-align: center; color: #fff; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin-top: 10px; font-size: 16px; }
+  section { padding: 30px 20px; max-width: 1100px; margin: auto; }
+  h2 { color: #c2185b; margin-bottom: 20px; text-align: center; }
+
+  /* بطاقات مانيكير وباديكير */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .service-card {
+    background: #fde0eb;
+    border: 1px solid #f8bbd0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .service-card i {
+    font-size: 36px;
+    color: #c2185b;
+    margin-bottom: 10px;
+  }
+  .service-card h3 { color: #c2185b; margin-bottom: 10px; font-size: 18px; }
+  .service-card p { font-size: 14px; margin-bottom: 15px; }
+  .price { font-weight: bold; color: #c2185b; font-size: 16px; }
+
+  /* نموذج الحجز */
+  form { margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 15px; }
+  input, textarea, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+  button { background: #c2185b; color: #fff; border: none; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+  button:hover { background: #e91e63; }
+
+  @media (max-width: 768px) {
+    .services-container { flex-direction: column; align-items: center; }
+    .service-card { width: 90%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>مانيكير وباديكير</h1>
+  <p>اختاري الخدمة التي تناسبك للحصول على أظافر صحية وجميلة</p>
+</header>
+
+<section>
+  <h2>أشهر خدمات المانيكير والباديكير وأسعارها</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <i class="fas fa-hand-sparkles"></i>
+      <h3>مانيكير أساسي</h3>
+      <p>تنظيف وتشكيل الأظافر مع ترطيب بسيط للأصابع</p>
+      <span class="price">15$</span>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-gem"></i>
+      <h3>مانيكير جل</h3>
+      <p>طلاء جل طويل الأمد يعطي لمعاناً وحماية للأظافر</p>
+      <span class="price">25$</span>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-spa"></i>
+      <h3>مانيكير سبا</h3>
+      <p>تجربة فاخرة تشمل تقشير اليدين وتدليك وترطيب متقدم</p>
+      <span class="price">35$</span>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-foot"></i>
+      <h3>باديكير أساسي</h3>
+      <p>تنظيف الأقدام وتشكيل الأظافر وإزالة الجلد الزائد</p>
+      <span class="price">20$</span>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-water"></i>
+      <h3>باديكير سبا</h3>
+      <p>تجربة فاخرة تشمل تقشير القدمين وتدليك وترطيب مكثف</p>
+      <span class="price">30$</span>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-paint-roller"></i>
+      <h3>باديكير جل</h3>
+      <p>طلاء جل طويل الأمد للأظافر مع ترطيب القدمين وتنعيم الجلد</p>
+      <span class="price">28$</span>
+    </div>
+  </div>
+
+  <h2>احجزي جلستك الآن</h2>
+  <form action="https://formspree.io/f/mdkdqkal" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+
+    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+    <textarea name="message" placeholder="رسالتك / طلبك" rows="4"></textarea>
+    <button type="submit">إرسال الطلب</button>
+  </form>
+</section>
+
+</body>
+</html>

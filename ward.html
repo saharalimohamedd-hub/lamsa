@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>باقات ورد العرائس</title>
+  <style>
+    :root{
+      --brand:#e91e63;
+      --brand-2:#ff80ab;
+      --bg:#fff7fb;
+      --text:#333;
+      --muted:#777;
+      --card:#fff;
+      --shadow:0 10px 20px rgba(0,0,0,.06);
+    }
+    body{
+      margin:0;
+      font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background:#fdfdfd;
+    }
+    .flower-section{
+      background: var(--bg);
+      padding: 40px 16px;
+      color: var(--text);
+    }
+    .flower-section h2{
+      text-align:center;
+      margin:0 0 8px;
+      font-size: 28px;
+    }
+    .section-subtitle{
+      text-align:center;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+    .items-container{
+      display:grid;
+      grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+      gap:18px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .item-card{
+      background: var(--card);
+      border-radius:16px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .item-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0,0,0,.08);
+    }
+    .item-card img{
+      width:100%;
+      height: 220px;
+      object-fit: cover;
+      display:block;
+    }
+    .item-card h3{
+      font-size:18px;
+      margin:14px 14px 6px;
+    }
+    .item-card p{
+      margin:0 14px 10px;
+      color: var(--muted);
+      line-height:1.7;
+      font-size: 14px;
+    }
+    .price{
+      margin:0 14px 12px;
+      font-weight:700;
+    }
+    .price .discount{
+      background: linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;
+      font-weight:600;
+      padding:3px 8px;
+      border-radius:999px;
+      font-size:12px;
+      margin-inline-start:8px;
+    }
+    .booking-form{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      padding: 0 14px 14px;
+      margin-top:auto;
+    }
+    .booking-form input,
+    .booking-form textarea{
+      border:1px solid #eee;
+      border-radius:10px;
+      padding:10px 12px;
+      font-size:14px;
+      outline:none;
+      transition: border-color .15s ease, box-shadow .15s ease;
+      background:#fff;
+    }
+    .booking-form input:focus,
+    .booking-form textarea:focus{
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(233,30,99,.08);
+    }
+    .book-btn{
+      background: linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;
+      border:none;
+      border-radius:12px;
+      padding:12px 14px;
+      font-weight:700;
+      cursor:pointer;
+      transition: opacity .15s ease;
+    }
+    .book-btn:hover{ opacity:.9 }
+  </style>
+</head>
+<body>
+
+<!-- ====== قسم باقات العرائس ====== -->
+<section class="flower-section">
+  <h2>🌸 باقات ورد العرائس – يوم الزفاف 🌸</h2>
+  <p class="section-subtitle">اختاري الباقة التي تعكس ذوقك وتكمل إطلالتك في يومك المميز</p>
+
+  <div class="items-container">
+    <!-- 1) الباقة الدائرية -->
+    <div class="item-card">
+     <img src= 'images/ward1.jpg',> 
+      <h3>باقة دائرية كلاسيكية</h3>
+      <p>تنسيق دائري متناسق من الورد الجوري الأبيض مع لمسات خضراء ناعمة.</p>
+      <div class="price">85$ <span class="discount">خصم 10%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="باقة دائرية كلاسيكية">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date" placeholder="تاريخ الزفاف">
+        <textarea name="notes" placeholder="ملاحظة / لون مفضل" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+    <!-- 2) كاسكاد -->
+    <div class="item-card">
+      <img src= 'images/ward2.webp',> 
+      <h3>باقة كاسكاد ملكية</h3>
+      <p>تصميم شلال متدلٍ بأوركيد وزنابق لإطلالة فخمة وملكية.</p>
+      <div class="price">130$ <span class="discount">خصم 12%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="باقة كاسكاد ملكية">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date">
+        <textarea name="notes" placeholder="لون الورود / المقاس" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+
+    <!-- 3) بوكيه صغير Posy -->
+    <div class="item-card">
+       <img src= 'images/ward3.jpg',> 
+      <h3>باقة صغيرة (Posy)</h3>
+      <p>خيار خفيف وسهل الحمل بلمسات ساتان ناعمة لأسلوب بسيط.</p>
+      <div class="price">65$ <span class="discount">خصم 8%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="باقة صغيرة Posy">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date">
+        <textarea name="notes" placeholder="نوع الشريط / اللون" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+
+    <!-- 4) Hand-tied -->
+    <div class="item-card">
+       <img src= 'images/ward4.jpg',> 
+      <h3>باقة يد طبيعية</h3>
+      <p>تنسيق يبدو كأنه مقطوف للتو من الحديقة بمظهر عفوي أنيق.</p>
+      <div class="price">90$ <span class="discount">خصم 10%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="باقة يد طبيعية">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date">
+        <textarea name="notes" placeholder="ألوان مفضلة / أنواع زهور" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+
+    
+
+    <!-- 6) لون واحد Monochrome -->
+    <div class="item-card">
+  <img src= 'images/ward5.webp',> 
+      <h3>أحادية اللون (أبيض كامل)</h3>
+      <p>تنسيق فاخر بلون واحد ليبرز فستان الزفاف ويعكس الأناقة.</p>
+      <div class="price">120$ <span class="discount">خصم 15%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="أحادية اللون (أبيض)">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date">
+        <textarea name="notes" placeholder="درجة الأبيض / إضافات" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+
+    <!-- 7) ميكس ألوان -->
+    <div class="item-card">
+ <img src= 'images/ward6.webp',> 
+      <h3>باقة ألوان مختلطة</h3>
+      <p>مزيج مرِح من الورود الملونة لإطلالة جريئة ومبهجة.</p>
+      <div class="price">95$ <span class="discount">خصم 12%</span></div>
+      <form action="https://formspree.io/f/mdkdqkal" method="POST" class="booking-form">
+        <input type="hidden" name="item" value="باقة ألوان مختلطة">
+        <input type="text" name="name" placeholder="اسمك" required>
+        <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+        <input type="date" name="wedding_date">
+        <textarea name="notes" placeholder="لوحة الألوان المرغوبة" rows="2"></textarea>
+        <button type="submit" class="book-btn">احجزي الآن</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
